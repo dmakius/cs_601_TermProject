@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="static/css/styles.css" >
         <link rel="stylesheet" href="static/css/modal.css" >
         <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+     
       <style>
         img{
             border:1px solid black;
@@ -64,21 +64,6 @@
                 </div>
       
         </main>
-        <script>        
-            $("img").click(function(){
-                var modal = $("#myModal");
-                console.log(modal);
-                modal.css("display","block");
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            });
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            var span = $(".close")[0];
-          
-            span.onclick = function() { 
-                $("#myModal").css('display', "none");
-            }
-        </script>
+        <script src="static/js/modal.js"></script>
     </body>
 </html>
