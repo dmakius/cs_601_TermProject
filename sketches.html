@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MISC</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/css/styles.css" >
+        <link rel="stylesheet" href="static/css/modal.css" >
+        <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <style>
+        img{
+            border:1px solid black;
+        }
+      </style>
+    </head>
+    <body>    
+        <nav>
+            <h1>DM</h1>   
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="sketches.html">Sketches</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <div class="container">
+                    <h1 class="heading-text">Paintings <span> Gallery</span></h1>
+                    <div class="image-gallery">
+                        <div class="column">
+                                <img id="myImg" src ='static/img/sketches/sketch_1.jpg' alt="painting 1">
+                                <img src ='static/img/sketches/sketch_4.jpg' alt="painting 2">
+                                <img src ='static/img/sketches/sketch_5.jpg' alt="painting 3">  
+                        </div>
+                        <div class="column">
+                                <img src ='static/img/sketches/sketch_6.jpg' alt="painting 6">
+                                <img src ='static/img/sketches/sketch_2.jpg' alt="painting 7">
+                                <img src ='static/img/sketches/sketch_7.jpg' alt="painting 8">
+                                <img src ='static/img/sketches/sketch_8.jpg' alt="painting 9">
+        
+                        </div>
+                        <div class="column">
+                                <img src ='static/img/sketches/sketch_9.jpg' alt="painting 11">
+                                <img src ='static/img/sketches/sketch_10.jpg' alt="painting 12">
+                                <img src ='static/img/sketches/sketch_11.jpg' alt="painting 13">
+                                <img src ='static/img/sketches/sketch_12.jpg' alt="painting 14">
+                         </div>
+                         <div class="column">
+                            <img src ='static/img/sketches/sketch_4.jpg' alt="painting 4">
+                            <img src ='static/img/sketches/sketch_3.jpg' alt="painting 5">
+                            <img src ='static/img/sketches/sketch_13.jpg' alt="painting 5">
+                            <img src ='static/img/sketches/sketch_14.jpg' alt="painting 5">
+
+                         </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+      
+        </main>
+        <script>        
+            $("img").click(function(){
+                var modal = $("#myModal");
+                console.log(modal);
+                modal.css("display","block");
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            var span = $(".close")[0];
+          
+            span.onclick = function() { 
+                $("#myModal").css('display', "none");
+            }
+        </script>
+    </body>
+</html>

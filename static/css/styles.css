@@ -1,0 +1,176 @@
+/* GENERAL SETTINGS - ALL PAGES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    font-family: Arial;
+    color: #263238;
+  }
+  main{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right:15px;
+}
+
+ul{
+    list-style: none;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  /* NAV BAR */
+  nav {
+    display: flex; 
+    justify-content: space-between;
+    padding:10px; 
+    background: #333;
+    color: #f2f2f2;
+    border:5px solid
+    
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    padding-left: 1rem; 
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+
+
+ nav a:hover {
+  color: red;
+  }
+ nav a.active {
+    color: white;
+  }
+
+/* Main Page */
+.center-text{
+    text-align: center;
+}
+
+#mainImg{
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border:2px solid black
+}
+
+/* ABOUT PAGE */
+#SimbaContent {
+    text-align: center;
+    margin:15px;
+}
+
+.center{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ART PAGE */
+
+.container{
+    margin-top:15px;
+  }
+
+
+  .heading-text span{
+    font-weight: 100;
+}
+
+.image-gallery{    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+.column {
+    box-sizing: border-box;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-filter: grayscale(1);
+  }
+
+.column img:hover {
+    -webkit-filter: none;
+  }
+
+  
+
+
+/* Responsive layout - makes a TWO column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+/* Responsive layout - makes a ONE column-layout instead of four columns */
+  @media screen and (max-width: 500px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+ 
+ /* Responsive layout - makes aNAV BAR collaps on small screans */
+
+  @media only screen and (max-width: 500px) {
+    nav {
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+      padding-top: 0.5rem;
+    }
+    nav li {
+      padding: 0.5rem 0;
+    }
+    nav h1{
+      text-align: center;
+    }
+  } 
+
+   /* Responsive layout - makes the content section max at at 1kpx on LARGE Screens */
+  @media screen and (min-width: 1100px) {
+    main{
+        padding:0px;
+        width: 1000px;
+        display: block;
+        margin: auto;
+    }
+  }

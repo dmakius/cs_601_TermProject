@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>INFO</title>
+        <link rel="stylesheet" href="static/css/styles.css" >
+        <link rel="stylesheet" href="static/css/form.css" >
+        <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <script type="text/javascript" src ='static/js/form.js'></script>  
+        <nav>
+            <h1>DM</h1>
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="sketches.html">Sketches</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Contact Me</h1><br>
+        
+           
+            <form id = 'myForm'name="myForm" method = "post" to="https://api.jsonbin.io/v3/b">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <p class="error" id="nameError1">name must be two characters or more</p>
+                <p class="error" id="nameError2">name can only conatin letters A-Z</p>
+                
+               
+                
+                <label for="email">email</label><br>
+                <input type="text" id="email" name="email" required><br>
+                <p class="error" id="emailError">
+                    must be in a valid email format : TEST@EMAIL.com
+                </p>
+
+                <br>
+                <label for="message">message</label><br>
+                <textarea id="message"name ='message' rows="10" cols="70" required></textarea><br>
+                <input type="submit" value="Submit">
+           </form>
+        </main>
+    </body>
+   
+</html>
