@@ -76,14 +76,13 @@ $(document).ready(function(){
                     data: x,
                     dataType: 'json',
                     success: function (textStatus, status) {
-                        alert("Form Submission Sent Sucessfully");
                         console.log(textStatus);
                         console.log(status);
                         window.location.href ="success.html";
                     },
                     error: function(request, status, error) {
-                        console.log(request);
                         alert(request.responseText);
+                        console.log(request);
                         console.log(error);
                         console.log(status);
                        
